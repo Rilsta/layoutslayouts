@@ -22,6 +22,7 @@
 body{
   margin:0;
   padding:0;
+  font-family: sans-serif;
   background: #e4e4e4;
 }
 
@@ -36,24 +37,31 @@ p{
   display:block;
   margin: 0 auto;
 }
+.cf:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
 
 .navbar ul{
   list-style: none;
-  margin:0;
+  margin:0 0 15px 0;
   padding:0;
   text-align: center;
 }
 .navbar li {
   display: inline;
-  padding: 0 15px;
+  padding: 25px;
+  font-size: 1.3em;
 }
  .navbar li img{
   display: inline;
   height: 50px;
   width: 50px;
 }
-
-
 
 .column-1{
   margin: 0;
@@ -63,7 +71,6 @@ p{
 
 .column-1 img{
   width: 100%;
-  max-width: 650px;
   display:block;
   margin: 0 auto;
   background: #c9c;
@@ -94,25 +101,41 @@ p{
 
 /*MEDIA QUERIES*/
 
-/*@media screen and (min-width: 600px){
-  .column-1 img {
-    height: 90%;
+@media screen and (min-width: 600px){
+  .container{
     width:100%;
-    position: fixed;
-
   }
-  .column-1 {
+
+  .column-1, .column-2{
+    margin: 0;
+  }
+
+  .column-1{
     height: 100%;
-    overflow: hidden;
-
   }
 
-  .column-2 img, .column-3 img{
-   width: 45%;
-   height: auto;
+  .navbar li{
+    height: 10vh;
   }
 
-  .column-2 img{
-    margin-right: 10%;
+  .column-1 img{
+    height: 100vw;
+    object-fit: cover;
+    height:70vh;
+    margin-bottom: 25px;
   }
-}*/
+
+  .column-3{
+  }
+
+  .box2{
+    width:45%;
+    height: 30vh;
+    float: left;
+  }
+  .box3{
+    width:45%;
+    height:30vh;
+    float: right;
+  }
+}
